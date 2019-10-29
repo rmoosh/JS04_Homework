@@ -1,18 +1,41 @@
+  var MonkeyObj={
+    name: 'mon', species: 'gorila', foodsEaten:'coconut',
 
-    
-    
-    let monObj={ properties: [
-       { name:'mon', species:'gorila', foodsEaten:'coconut'},
-       {name:'mand', species:'mandrill',foodsEaten:'nuts'},
-       { name:'tai', species:'lionTailed', foodsEaten:'banana'}
-    ]};
+    eatsomething: function (){
+        console.log(this .foodsEaten);},
 
+        introduce: function (name,species,foodsEaten) {
 
-    let m= monObj['properties'];
-    for(let i=0,len=m.length;i<len;i++){
+            console.log(Object.keys(MonkeyObj));}
+    
+};   
 
-        console.log(m[i]);}
+var monkey2= Object.create(MonkeyObj);
+monkey2.name='mand';
+monkey2.species='mandrill'
+monkey2.foodsEaten='nuts';
+monkey2.eatsomething();
+
+ var monkey3=Object.create(MonkeyObj);
+ monkey3.name='tail';
+ monkey3.species="lionTailed"
+monkey3.foodsEaten='banana';
+monkey3.eatsomething();
+
+console.log(Object.keys(MonkeyObj));
+
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
     
     
     
     
+     
