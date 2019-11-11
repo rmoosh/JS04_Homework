@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Change the Channel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+</head>
+
+<body>
+  <main class="tv">
+    <h1>Let's see what's on tonight...</h1>
+    <section class="tv-picture-container">
+      <img class="" src="">
+      <div class="tv-show" id="screen">
+        <img src="img/blue-planet.jpg"  id ="mainImage" alt="something good to watch">
+      
+        
+        
+      </div>
+    </section>
+    <ul class="channels-container">
+      <li id="1" ></li><a href="img/blue-planet.jpg" >1</a>
+      <li id="2" ></li> <a href ="img/cnn.jpg">2</a>
+      <li id="3" ></li> <a href="img/deadpool.jpg">3</a>
+      <li id="4" ></li><a href="img/good-will-hunting.jpg">4</a>
+      <li id="5" ></li><a href="img/gravity.jpg">5</a>
+      <li id="6" ></li> <a href="img/koyaanisqatsi.jpg">6</a>
+      <li id="7" ></li> <a href="img/parts-unknown.jpg">7</a>
+      <li id="8"></li> <a href ="img/star-wars-solo.jpeg">8</a>
+      <li id="9" ></li><a href="img/stranger-things.jpg">9</a>
+    </ul>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/main.js">  </script>
+  <script type="text/javascript">
+  var myImage=document.getElementById('mainImage');
+  var imageArray=["img/blue-planet.jpg","img/cnn.jpg","img/deadpool.jpg","img/good-will-hunting.jpg","img/gravity.jpg","img/koyaanisqatsi.jpg","img/parts-unknown.jpg","img/star-wars-solo.jpeg","img/stranger-things.jpg"];
+  var imageIndex=1;
+  function changeImage(){
+myImage.setAttribute("src", imageArray[imageIndex]);
+imageIndex++;
+if(imageIndex>10){
+  imageIndex=0;}
+}
+
+  </script>
+ <button onclick="changeImage()"> change Channel</button>
+
+</body>
+</html>

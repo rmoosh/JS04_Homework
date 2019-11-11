@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Math.random()</h2>
+
+<p> get Random Integer  number between 0 
+and 9 :</p>
+
+<button onclick="document.getElementById('RandomNumber').innerHTML = getRndInteger(0,10)">Click Me</button>
+
+<p id="RandomNumber"></p>
+
+<script>
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+</script>
+
+</body>
+</html>
